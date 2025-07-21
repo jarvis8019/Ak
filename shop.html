@@ -10,28 +10,49 @@
       padding: 0;
     }
 
-    h1 {
-      text-align: center;
-      color: #333;
+    /* Header and Hamburger */
+    .header {
       background-color: #ffd700;
-      padding: 20px 0;
-      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
       border-bottom: 2px solid #ccc;
     }
 
-    p {
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      margin: 4px 0;
+    }
+
+    /* Intro paragraph */
+    .intro {
       text-align: center;
       font-size: 18px;
       color: #444;
       margin: 20px;
     }
 
+    /* Gallery styling */
     .gallery {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 30px;
       padding: 20px;
+      flex-wrap: wrap;
     }
 
     .item {
@@ -39,8 +60,8 @@
     }
 
     .item img {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
@@ -50,19 +71,33 @@
       transform: scale(1.05);
     }
 
-    .item a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
+    .item span {
       display: block;
       margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Responsive hamburger */
+    @media screen and (max-width: 600px) {
+      .hamburger {
+        display: flex;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to my Shop</h1>
-  <p>Discover a fun selection of bags, books, toys, and adorable teddy bears – all in one place!</p>
+  <div class="header">
+    <h1>Welcome to my Shop</h1>
+    <div class="hamburger" onclick="alert('Hamburger clicked! (You can add a menu here)')">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <p class="intro">Discover a fun selection of bags, books, toys, and adorable teddy bears – all in one place!</p>
 
   <div class="gallery">
     <div class="item">
