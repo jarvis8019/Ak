@@ -1,16 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Shop</title>
+  <title>Shop</title>
+  <style>
+    body {
+      background: #e7e7e7;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      background-color: #ffd700;
+      padding: 20px 0;
+      margin: 0;
+      border-bottom: 2px solid #ccc;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      color: #444;
+      margin: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .item {
+      text-align: center;
+    }
+
+    .item img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .item img:hover {
+      transform: scale(1.05);
+    }
+
+    .item a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
 </head>
-<body style="background: #e7e7e7">
+<body>
+
   <h1>Welcome to my Shop</h1>
-  <p>Discover a fun selection of bags, books, toys, and adorable teddy bears – all in one place! Great gifts and everyday items at affordable prices.</p>
-  <ul>
-    <li><a href="bags.html">BAGS</a></li>
-    <li><a href="books.html">BOOKS</a></li>
-    <li><a href="teddybear.html">TEDDY BEAR</a></li>
-    <li><a href="toys.html">TOYS</a></li>
-  </ul>
+  <p>Discover a fun selection of bags, books, toys, and adorable teddy bears – all in one place!</p>
+
+  <div class="gallery">
+    <div class="item">
+      <a href="bags.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995489.png" alt="Bags">
+        <span>BAGS</span>
+      </a>
+    </div>
+
+    <div class="item">
+      <a href="books.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965335.png" alt="Books">
+        <span>BOOKS</span>
+      </a>
+    </div>
+
+    <div class="item">
+      <a href="teddybear.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/5826/5826656.png" alt="Teddy Bear">
+        <span>TEDDY BEAR</span>
+      </a>
+    </div>
+
+    <div class="item">
+      <a href="toys.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/686/686589.png" alt="Toys">
+        <span>TOYS</span>
+      </a>
+    </div>
+  </div>
+
 </body>
 </html>
