@@ -22,8 +22,29 @@
 
     .header h1 {
       margin: 0;
-text-align: center;
+      text-align: center;
       font-size: 4vw;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .home-button {
+      background-color: #333;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: #555;
     }
 
     .hamburger {
@@ -50,8 +71,8 @@ text-align: center;
     /* Gallery styling */
     .gallery {
       display: flex;
-flex-direction: column;
-align-items: center;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
       gap: 30px;
       padding: 20px;
@@ -93,10 +114,13 @@ align-items: center;
 
   <div class="header">
     <h1>Welcome to my Shop</h1>
-    <div class="hamburger" onclick="alert('Hamburger clicked! (You can add a menu here)')">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="header-right">
+      <a class="home-button" href="index.html">Home</a>
+      <div class="hamburger" onclick="alert('Hamburger clicked! (You can add a menu here)')">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   </div>
 
@@ -105,28 +129,28 @@ align-items: center;
   <div class="gallery">
     <div class="item">
       <a href="bags.html">
-        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995489.png" alt="Bags">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7U5Zl3OqCxc6y8r8Q7B83E8d1s-NqbqblDg&s" alt="Bags">
         <span>BAGS</span>
       </a>
     </div>
 
     <div class="item">
       <a href="books.html">
-        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965335.png" alt="Books">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXKpf9OrPjsG48IVjgBdxhNZQZcsx-nhgTxUlXQo1xhQ&s" alt="Books">
         <span>BOOKS</span>
       </a>
     </div>
 
     <div class="item">
       <a href="teddybear.html">
-        <img src="https://cdn-icons-png.flaticon.com/512/5826/5826656.png" alt="Teddy Bear">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM2FrKETFnU-Ckhb5W7xzO4lvxVAJJL7bSTLybxuJ9Sg&s" alt="Teddy Bear">
         <span>TEDDY BEAR</span>
       </a>
     </div>
 
     <div class="item">
       <a href="toys.html">
-        <img src="https://cdn-icons-png.flaticon.com/512/686/686589.png" alt="Toys">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsRQl7pnNGVNy-Z6QhkpkzX4Q1QrS0ELLxBiKx5uW6zg&s" alt="Toys">
         <span>TOYS</span>
       </a>
     </div>
