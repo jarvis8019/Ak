@@ -17,6 +17,141 @@
     header {
       position: relative;
       width: 100%;
+      padding:  0;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 4vw;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hamburger {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      width: 30px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .hamburger div {
+      width: 100%;
+      height: 4px;
+      background-color: white;
+      margin: 6px 0;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 60px;
+      right: 25px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 8px;
+      display: none;
+      flex-direction: column;
+      min-width: 120px;
+      z-index: 9;
+    }
+
+    .dropdown a {
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid #444;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown a:hover {
+      background-color: #333;
+    }
+
+    .center-content {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    img {
+      width: 50vw;
+      height: auto;
+      border-radius: 23px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      background-color: white;
+      padding: 10px;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SHOP BAZAR</h1>
+    <div class="hamburger" onclick="toggleDropdown()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="dropdown" id="dropdownMenu">
+      <a href="sigin.html">Sign In</a>
+    </div>
+  </header>
+
+  <div class="center-content">
+    <a href="shop.html">
+      <img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Enter Shop">
+    </a>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    // Close dropdown if clicked outside
+    window.addEventListener('click', function(event) {
+      const dropdown = document.getElementById('dropdownMenu');
+      const hamburger = document.querySelector('.hamburger');
+      if (!dropdown.contains(event.target) && !hamburger.contains(event.target)) {
+        dropdown.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      height: 100vh;
+    }
+
+    header {
+      position: relative;
+      width: 100%;
       padding: 20px 0;
       text-align: center;
       background: rgba(0, 0, 0, 0.4);
